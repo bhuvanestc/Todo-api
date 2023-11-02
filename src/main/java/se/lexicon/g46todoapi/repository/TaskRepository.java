@@ -13,11 +13,8 @@ import java.util.List;
 @Repository
 public interface TaskRepository extends JpaRepository<Task, Long> {
 
-  // todo: select tasks by title
-  @Query("SELECT t FROM Task t WHERE t.title = :title")
   List<Task> findByTitle(String title);
-  // todo: select tasks by person id
-  @Query("SELECT t FROM Task t WHERE t.person = :personId")
+
   List<Task> findByPersonId(Long personId);
 
     // todo: select tasks by status
