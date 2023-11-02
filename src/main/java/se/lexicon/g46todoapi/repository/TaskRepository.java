@@ -17,11 +17,9 @@ public interface TaskRepository extends JpaRepository<Task, Long> {
 
   List<Task> findByPersonId(Long personId);
 
-    // todo: select tasks by status
-    @Query("SELECT t FROM Task t WHERE t.done = :status")
+
     List<Task> findByStatus(String status);
-  // todo: select tasks by date between start and end
-   @Query("SELECT t FROM Task t WHERE t.deadline BETWEEN :startDate AND :endDate")
+
     List<Task> findByDueDateBetween(LocalDate startDate, LocalDate endDate);
   // todo: select tasks by deadline
   @Query("SELECT t FROM Task t WHERE t.deadline < :deadline")
