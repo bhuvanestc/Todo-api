@@ -3,6 +3,7 @@ package se.lexicon.g46todoapi.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import se.lexicon.g46todoapi.converter.RoleConverter;
+import se.lexicon.g46todoapi.domain.dto.RoleDTOForm;
 import se.lexicon.g46todoapi.domain.dto.RoleDTOView;
 import se.lexicon.g46todoapi.domain.entity.Role;
 import se.lexicon.g46todoapi.repository.RoleRepository;
@@ -30,6 +31,26 @@ public class RoleServiceImpl implements RoleService {
       roleDTOList.add(roleConverter.toRoleDTOView(entity));
     }
     return roleDTOList;
+  }
+
+  @Override
+  public RoleDTOView findById(Integer roleId) {
+    return null;
+  }
+
+  @Override
+  public RoleDTOView create(RoleDTOForm roleDto) {
+    return null;
+  }
+
+  @Override
+  public void update(RoleDTOForm roleDto) {
+
+  }
+
+  @Override
+  public void delete(Integer roleId) {
+
   }
 
 }

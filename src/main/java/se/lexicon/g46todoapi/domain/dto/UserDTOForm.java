@@ -12,5 +12,6 @@ import java.util.Set;
 public class UserDTOForm {
   private String email;
   private String password;
+  private boolean expired;
   private Set<RoleDTOForm> roles;
 }

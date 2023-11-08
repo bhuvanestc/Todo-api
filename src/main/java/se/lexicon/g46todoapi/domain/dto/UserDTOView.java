@@ -12,5 +12,7 @@ import java.util.Set;
 public class UserDTOView {
 
   private String email;
+  private String password;
+  private boolean expired;
   private Set<RoleDTOView> roles;
 }

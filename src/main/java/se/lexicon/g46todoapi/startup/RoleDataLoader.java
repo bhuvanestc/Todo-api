@@ -21,6 +21,7 @@ public class RoleDataLoader implements CommandLineRunner {
     roleRepository.save(new Role("ADMIN"));
     roleRepository.save(new Role("USER"));
     roleRepository.save(new Role("GUEST"));
+
     // add more roles as needed
   }
 
